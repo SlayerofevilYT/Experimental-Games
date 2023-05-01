@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6400224275138285043}
   - component: {fileID: 7147751032055206626}
+  - component: {fileID: -7232741657170717780}
   m_Layer: 0
   m_Name: TestDiamond
   m_TagString: Untagged
@@ -84,3 +85,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-7232741657170717780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3303829426931540093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb315f3682f0434c94714e49aacb7e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 3
+  fireRate: 1
+  projectile: {fileID: 0}

@@ -28,7 +28,7 @@ public class TowerListUI : MonoBehaviour
         closeButton.onClick.AddListener(OnCloseButtonClicked);
     }
 
-    void Update()
+    /*void Update()
     {
         if (towerListPanel.activeSelf)
         {
@@ -46,7 +46,7 @@ public class TowerListUI : MonoBehaviour
             towerListPanel.transform.position = new Vector3(clampedX, clampedY, 0f);
             Debug.Log("Clamping coords");
         }
-    }
+    }*/
 
 
     // Called when a tower button is clicked
