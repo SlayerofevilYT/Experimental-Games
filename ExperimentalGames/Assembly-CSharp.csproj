@@ -61,6 +61,8 @@
     <Compile Include="Assets\Scripts\Tower.cs" />
     <Compile Include="Assets\Scripts\TowerPlacement.cs" />
     <Compile Include="Assets\Scripts\CloseButton.cs" />
+    <Compile Include="Assets\Scripts\EnemyWaveSpawner.cs" />
+    <Compile Include="Assets\Scripts\EnemyMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
