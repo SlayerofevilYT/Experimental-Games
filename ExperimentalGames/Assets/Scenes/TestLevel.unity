@@ -1135,7 +1135,8 @@ MonoBehaviour:
   - {fileID: 5864282942910415936, guid: 4c04664861bc3f045a7d8e33779fe2f6, type: 3}
   towerListUI: {fileID: 803131307}
   startPlacement: 0
-  currentTilePosition: {x: 0, y: 0, z: 0}
+  currentTilePosition: {x: 4.59, y: 0.71, z: 0}
+  towerCost: 50
 --- !u!1 &637137456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,7 +1217,8 @@ MonoBehaviour:
   - {fileID: 5864282942910415936, guid: 4c04664861bc3f045a7d8e33779fe2f6, type: 3}
   towerListUI: {fileID: 803131307}
   startPlacement: 0
-  currentTilePosition: {x: 0, y: 0, z: 0}
+  currentTilePosition: {x: -2.54, y: 3.1, z: 0}
+  towerCost: 50
 --- !u!1 &740032868
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,7 +2039,8 @@ MonoBehaviour:
   - {fileID: 5864282942910415936, guid: 4c04664861bc3f045a7d8e33779fe2f6, type: 3}
   towerListUI: {fileID: 803131307}
   startPlacement: 0
-  currentTilePosition: {x: 0, y: 0, z: 0}
+  currentTilePosition: {x: 3.99, y: -2.92, z: 0}
+  towerCost: 50
 --- !u!4 &995317018
 Transform:
   m_ObjectHideFlags: 0
@@ -2255,7 +2258,8 @@ MonoBehaviour:
   - {fileID: 5864282942910415936, guid: 4c04664861bc3f045a7d8e33779fe2f6, type: 3}
   towerListUI: {fileID: 803131307}
   startPlacement: 0
-  currentTilePosition: {x: 0, y: 0, z: 0}
+  currentTilePosition: {x: 0.14, y: -0.56, z: 0}
+  towerCost: 50
 --- !u!1 &1107575703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2396,10 +2400,10 @@ RectTransform:
   m_Father: {fileID: 803131312}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -935, y: 435}
-  m_SizeDelta: {x: 400, y: 150}
+  m_AnchorMin: {x: 0.054300033, y: 0.7552592}
+  m_AnchorMax: {x: 0.22415002, y: 0.89400005}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1162822952
 MonoBehaviour:
@@ -3435,7 +3439,8 @@ MonoBehaviour:
   - {fileID: 5864282942910415936, guid: 4c04664861bc3f045a7d8e33779fe2f6, type: 3}
   towerListUI: {fileID: 803131307}
   startPlacement: 0
-  currentTilePosition: {x: 0, y: 0, z: 0}
+  currentTilePosition: {x: -3.72, y: -1.77, z: 0}
+  towerCost: 50
 --- !u!61 &1369720756
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4607,10 +4612,10 @@ RectTransform:
   m_Father: {fileID: 803131312}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 935, y: 435}
-  m_SizeDelta: {x: 400, y: 150}
+  m_AnchorMin: {x: 0.77615005, y: 0.7552592}
+  m_AnchorMax: {x: 0.94615006, y: 0.89300007}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1868684147
 MonoBehaviour:

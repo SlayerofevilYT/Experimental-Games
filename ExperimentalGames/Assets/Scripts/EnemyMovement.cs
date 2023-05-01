@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    private float speed = 3f;
+    public float speed = 3f;
     public Transform[] waypoints;
     private int waypointIndex;
 

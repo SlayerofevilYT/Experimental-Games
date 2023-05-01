@@ -374,6 +374,7 @@
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/PlayerStats.cs"
 "Assets/Scripts/Projectile.cs"
+"Assets/Scripts/SceneChanger.cs"
 "Assets/Scripts/Tower.cs"
 "Assets/Scripts/TowerListUI.cs"
 "Assets/Scripts/TowerPlacement.cs"

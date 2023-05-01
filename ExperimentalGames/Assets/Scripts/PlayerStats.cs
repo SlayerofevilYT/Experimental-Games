@@ -16,6 +16,6 @@ public class PlayerStats : MonoBehaviour
     void Update()
     {
         livesText.text = "Lives: " + Lives.ToString();
-        moneyText.text = "Money: $" + Money.ToString();
+        moneyText.text = "$" + Money.ToString();
     }
 }

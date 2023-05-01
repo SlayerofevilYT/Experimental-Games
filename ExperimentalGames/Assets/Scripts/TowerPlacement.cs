@@ -12,6 +12,8 @@ public class TowerPlacement : MonoBehaviour
     private GameObject currentTower;
     public Vector3 currentTilePosition;
 
+    public int towerCost = 50;
+
     void OnMouseDown()
     {
         towerListUI.GetComponent<TowerListUI>().ShowTowerList(transform.position);
@@ -36,15 +38,22 @@ public class TowerPlacement : MonoBehaviour
 
         if (selectedTower != null)
         {
-            // Instantiate the selected tower prefab and place it at the current tile position
-            Tower tower = Instantiate(selectedTower, currentTilePosition, Quaternion.identity);
-            tower.transform.SetParent(transform);
-            Debug.Log("Placing"+selectedTower);
+            if (PlayerStats.Money >= towerCost)
+            {
+                // Instantiate the selected tower prefab and place it at the current tile position
+                Tower tower = Instantiate(selectedTower, currentTilePosition, Quaternion.identity);
+                tower.transform.SetParent(transform);
+                Debug.Log("Placing" + selectedTower);
 
-            // Clean up the current tower placement state
-            isPlacingTower = false;
-            currentTower = null;
-            currentTilePosition = Vector3.zero;
+                // Clean up the current tower placement state
+                isPlacingTower = false;
+                currentTower = null;
+                currentTilePosition = Vector3.zero;
+                PlayerStats.Money -= towerCost;
+            } else
+            {
+                Debug.Log("Not enough money to place tower!");
+            }
         }
     }
 
