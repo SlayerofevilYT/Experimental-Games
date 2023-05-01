@@ -65,7 +65,7 @@ public class Tower : MonoBehaviour
     private void Shoot()
     {
         GameObject newProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
-        //newProjectile.GetComponent<Projectile>().SetTarget(target);
+        newProjectile.GetComponent<Projectile>().SetTarget(target);
     }
 
     // Draws a gizmo representing the tower's range in the Unity editor

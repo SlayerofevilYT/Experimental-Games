@@ -8,13 +8,13 @@ public class TowerPlacement : MonoBehaviour
     public GameObject towerListUI;
 
     private bool isPlacingTower;
+    public bool startPlacement;
     private GameObject currentTower;
-    private Vector3 currentTilePosition;
+    public Vector3 currentTilePosition;
 
     void OnMouseDown()
     {
         towerListUI.GetComponent<TowerListUI>().ShowTowerList(transform.position);
-        Debug.Log("Showing Tower List");
     }
 
     private void Update()
@@ -23,7 +23,7 @@ public class TowerPlacement : MonoBehaviour
         {
             currentTower.transform.position = currentTilePosition;
 
-            if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
+            if (!EventSystem.current.IsPointerOverGameObject())
             {
                 PlaceTower();
             }
@@ -32,13 +32,14 @@ public class TowerPlacement : MonoBehaviour
 
     private void PlaceTower()
     {
-        var selectedTower = towerListUI.GetComponent<TowerListUI>().GetSelectedTower();
+        Tower selectedTower = towerListUI.GetComponent<TowerListUI>().GetSelectedTower();
 
         if (selectedTower != null)
         {
             // Instantiate the selected tower prefab and place it at the current tile position
-            var tower = Instantiate(selectedTower, currentTilePosition, Quaternion.identity);
+            Tower tower = Instantiate(selectedTower, currentTilePosition, Quaternion.identity);
             tower.transform.SetParent(transform);
+            Debug.Log("Placing"+selectedTower);
 
             // Clean up the current tower placement state
             isPlacingTower = false;
@@ -47,7 +48,7 @@ public class TowerPlacement : MonoBehaviour
         }
     }
 
-    public void StartTowerPlacement(Vector3 tilePosition)
+    public void StartTowerPlacement()
     {
         if (!isPlacingTower)
         {
@@ -55,14 +56,11 @@ public class TowerPlacement : MonoBehaviour
             currentTower = new GameObject("CurrentTower");
             currentTower.transform.SetParent(transform);
 
-            // Set the current tower position to the center of the clicked tile
-            currentTilePosition = tilePosition + new Vector3(0.5f, 0.5f, 0f);
-
             // Set the current tower to the first tower in the tower prefabs list
             var towerPrefab = towerPrefabs[0];
             var towerRenderer = towerPrefab.GetComponent<SpriteRenderer>();
             var towerSize = towerRenderer.bounds.size;
-            currentTower.transform.position = currentTilePosition - new Vector3(0f, towerSize.y / 2f, 0f);
+            currentTower.transform.position = transform.position;
             var towerSprite = towerRenderer.sprite;
             currentTower.AddComponent<SpriteRenderer>().sprite = towerSprite;
 

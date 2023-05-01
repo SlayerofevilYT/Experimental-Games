@@ -10,6 +10,7 @@ public class TowerListUI : MonoBehaviour
     public Button[] towerButtons;       // The buttons representing each tower in the list
 
     private Tower selectedTower;        // The currently selected tower
+    public TowerPlacement[] placingTowers;
 
     // Called when the script is first enabled
     private void Start()
@@ -21,7 +22,7 @@ public class TowerListUI : MonoBehaviour
         for (int i = 0; i < towerButtons.Length; i++)
         {
             int index = i;
-            towerButtons[i].onClick.AddListener(() => { OnTowerButtonClicked(index); });
+            towerButtons[index].onClick.AddListener(() => { OnTowerButtonClicked(index); });
         }
 
         // Add a click listener to the close button
@@ -32,6 +33,10 @@ public class TowerListUI : MonoBehaviour
     {
         if (towerListPanel.activeSelf)
         {
+
+            // Set the position of the towerListPanel to the current tile position
+            //towerListPanel.transform.position = currentTilePosition;
+
             // Get the size of the towerListPanel
             Vector2 panelSize = towerListPanel.GetComponent<RectTransform>().rect.size;
 
@@ -44,7 +49,6 @@ public class TowerListUI : MonoBehaviour
             float clampedY = Mathf.Clamp(towerListPanel.transform.position.y, panelSize.y / 2f, maxY);
 
             towerListPanel.transform.position = new Vector3(clampedX, clampedY, 0f);
-            Debug.Log("Clamping coords");
         }
     }*/
 
@@ -57,9 +61,13 @@ public class TowerListUI : MonoBehaviour
 
         // Get the tower associated with the clicked button
         selectedTower = GameManager.instance.availableTowers[index];
+        Debug.Log("Getting tower no."+index);
 
         // Highlight the selected button
         towerButtons[index].GetComponent<Image>().color = Color.yellow;
+
+        towerListPanel.SetActive(false);
+        placingTowers[index].StartTowerPlacement();
     }
 
     // Called when the close button is clicked
