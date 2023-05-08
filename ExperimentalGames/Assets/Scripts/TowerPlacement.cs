@@ -23,18 +23,15 @@ public class TowerPlacement : MonoBehaviour
     {
         if (isPlacingTower)
         {
-            currentTower.transform.position = currentTilePosition;
+            currentTilePosition = this.transform.position;
 
-            if (!EventSystem.current.IsPointerOverGameObject())
-            {
-                PlaceTower();
-            }
+            PlaceTower();
         }
     }
 
     private void PlaceTower()
     {
-        Tower selectedTower = towerListUI.GetComponent<TowerListUI>().GetSelectedTower();
+        Tower selectedTower = towerListUI.GetComponent<TowerListUI>().GetSelectedTower(transform.position);
 
         if (selectedTower != null)
         {
@@ -47,8 +44,8 @@ public class TowerPlacement : MonoBehaviour
 
                 // Clean up the current tower placement state
                 isPlacingTower = false;
-                currentTower = null;
-                currentTilePosition = Vector3.zero;
+                // Destroy the current tower placement object
+                Destroy(currentTower);
                 PlayerStats.Money -= towerCost;
             } else
             {
@@ -65,14 +62,6 @@ public class TowerPlacement : MonoBehaviour
             currentTower = new GameObject("CurrentTower");
             currentTower.transform.SetParent(transform);
 
-            // Set the current tower to the first tower in the tower prefabs list
-            var towerPrefab = towerPrefabs[0];
-            var towerRenderer = towerPrefab.GetComponent<SpriteRenderer>();
-            var towerSize = towerRenderer.bounds.size;
-            currentTower.transform.position = transform.position;
-            var towerSprite = towerRenderer.sprite;
-            currentTower.AddComponent<SpriteRenderer>().sprite = towerSprite;
-
             // Show the tower list UI
             towerListUI.SetActive(true);
 
@@ -85,9 +74,6 @@ public class TowerPlacement : MonoBehaviour
     {
         if (isPlacingTower)
         {
-            // Destroy the current tower placement object
-            Destroy(currentTower);
-
             // Hide the tower list UI
             towerListUI.SetActive(false);
 

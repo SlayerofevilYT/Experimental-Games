@@ -467,7 +467,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 310.30154, y: -165}
+  m_AnchoredPosition: {x: 310.30157, y: -165}
   m_SizeDelta: {x: 540.6031, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &235259197
@@ -675,7 +675,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 310.30154, y: -265}
+  m_AnchoredPosition: {x: 310.30157, y: -265}
   m_SizeDelta: {x: 540.6031, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &433075338
@@ -1064,8 +1064,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 588172319}
-  - component: {fileID: 588172321}
   - component: {fileID: 588172320}
+  - component: {fileID: 588172321}
   m_Layer: 0
   m_Name: P4
   m_TagString: Untagged
@@ -1128,15 +1128,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPrefabs:
-  - {fileID: 5864282942910415936, guid: 6a4a592b85d005f498df11c06fdf92a5, type: 3}
   - {fileID: 5864282942910415936, guid: 60722e74b6957eb47af4a4284b175a72, type: 3}
   - {fileID: 5864282942910415936, guid: 4e2f82884a635054eba19137cdf9b3e2, type: 3}
   - {fileID: 5864282942910415936, guid: b2f946d50be64144997c38227f1086a1, type: 3}
   - {fileID: 5864282942910415936, guid: 4c04664861bc3f045a7d8e33779fe2f6, type: 3}
+  - {fileID: 5864282942910415936, guid: 6a4a592b85d005f498df11c06fdf92a5, type: 3}
   towerListUI: {fileID: 803131307}
   startPlacement: 0
-  currentTilePosition: {x: 4.59, y: 0.71, z: 0}
-  towerCost: 50
+  currentTilePosition: {x: 0, y: 0, z: 0}
+  towerCost: 10
 --- !u!1 &637137456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,8 +1146,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 637137457}
-  - component: {fileID: 637137459}
   - component: {fileID: 637137458}
+  - component: {fileID: 637137459}
   m_Layer: 0
   m_Name: P3
   m_TagString: Untagged
@@ -1210,15 +1210,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPrefabs:
-  - {fileID: 5864282942910415936, guid: 6a4a592b85d005f498df11c06fdf92a5, type: 3}
   - {fileID: 5864282942910415936, guid: 60722e74b6957eb47af4a4284b175a72, type: 3}
   - {fileID: 5864282942910415936, guid: 4e2f82884a635054eba19137cdf9b3e2, type: 3}
   - {fileID: 5864282942910415936, guid: b2f946d50be64144997c38227f1086a1, type: 3}
   - {fileID: 5864282942910415936, guid: 4c04664861bc3f045a7d8e33779fe2f6, type: 3}
+  - {fileID: 5864282942910415936, guid: 6a4a592b85d005f498df11c06fdf92a5, type: 3}
   towerListUI: {fileID: 803131307}
   startPlacement: 0
-  currentTilePosition: {x: -2.54, y: 3.1, z: 0}
-  towerCost: 50
+  currentTilePosition: {x: 0, y: 0, z: 0}
+  towerCost: 10
 --- !u!1 &740032868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,12 +1428,11 @@ MonoBehaviour:
   - {fileID: 1545273535}
   - {fileID: 1494542375}
   placingTowers:
-  - {fileID: 1369720755}
+  - {fileID: 1369720757}
   - {fileID: 1025049699}
   - {fileID: 637137459}
   - {fileID: 588172321}
-  - {fileID: 588172321}
-  - {fileID: 995317017}
+  - {fileID: 995317019}
 --- !u!1 &804541957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,8 +1983,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 995317018}
-  - component: {fileID: 995317017}
   - component: {fileID: 995317016}
+  - component: {fileID: 995317019}
   m_Layer: 0
   m_Name: P5
   m_TagString: Untagged
@@ -2019,28 +2018,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &995317017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 995317015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15e2bc510c8bc5f4880b88cb8826c598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerPrefabs:
-  - {fileID: 5864282942910415936, guid: 6a4a592b85d005f498df11c06fdf92a5, type: 3}
-  - {fileID: 5864282942910415936, guid: 60722e74b6957eb47af4a4284b175a72, type: 3}
-  - {fileID: 5864282942910415936, guid: 4e2f82884a635054eba19137cdf9b3e2, type: 3}
-  - {fileID: 5864282942910415936, guid: b2f946d50be64144997c38227f1086a1, type: 3}
-  - {fileID: 5864282942910415936, guid: 4c04664861bc3f045a7d8e33779fe2f6, type: 3}
-  towerListUI: {fileID: 803131307}
-  startPlacement: 0
-  currentTilePosition: {x: 3.99, y: -2.92, z: 0}
-  towerCost: 50
 --- !u!4 &995317018
 Transform:
   m_ObjectHideFlags: 0
@@ -2057,6 +2034,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &995317019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995317015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e2bc510c8bc5f4880b88cb8826c598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefabs:
+  - {fileID: 5864282942910415936, guid: 60722e74b6957eb47af4a4284b175a72, type: 3}
+  - {fileID: 5864282942910415936, guid: 4e2f82884a635054eba19137cdf9b3e2, type: 3}
+  - {fileID: 5864282942910415936, guid: b2f946d50be64144997c38227f1086a1, type: 3}
+  - {fileID: 5864282942910415936, guid: 4c04664861bc3f045a7d8e33779fe2f6, type: 3}
+  - {fileID: 5864282942910415936, guid: 6a4a592b85d005f498df11c06fdf92a5, type: 3}
+  towerListUI: {fileID: 803131307}
+  startPlacement: 0
+  currentTilePosition: {x: 0, y: 0, z: 0}
+  towerCost: 10
 --- !u!1 &1000669443
 GameObject:
   m_ObjectHideFlags: 0
@@ -2187,8 +2186,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1025049697}
-  - component: {fileID: 1025049699}
   - component: {fileID: 1025049698}
+  - component: {fileID: 1025049699}
   m_Layer: 0
   m_Name: P2
   m_TagString: Untagged
@@ -2251,15 +2250,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPrefabs:
-  - {fileID: 5864282942910415936, guid: 6a4a592b85d005f498df11c06fdf92a5, type: 3}
   - {fileID: 5864282942910415936, guid: 60722e74b6957eb47af4a4284b175a72, type: 3}
   - {fileID: 5864282942910415936, guid: 4e2f82884a635054eba19137cdf9b3e2, type: 3}
   - {fileID: 5864282942910415936, guid: b2f946d50be64144997c38227f1086a1, type: 3}
   - {fileID: 5864282942910415936, guid: 4c04664861bc3f045a7d8e33779fe2f6, type: 3}
+  - {fileID: 5864282942910415936, guid: 6a4a592b85d005f498df11c06fdf92a5, type: 3}
   towerListUI: {fileID: 803131307}
   startPlacement: 0
-  currentTilePosition: {x: 0.14, y: -0.56, z: 0}
-  towerCost: 50
+  currentTilePosition: {x: 0, y: 0, z: 0}
+  towerCost: 10
 --- !u!1 &1107575703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2676,7 +2675,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 310.30154, y: -365}
+  m_AnchoredPosition: {x: 310.30157, y: -365}
   m_SizeDelta: {x: 540.6031, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1174915364
@@ -3394,8 +3393,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1369720754}
-  - component: {fileID: 1369720755}
   - component: {fileID: 1369720756}
+  - component: {fileID: 1369720757}
   m_Layer: 0
   m_Name: P1
   m_TagString: Untagged
@@ -3419,28 +3418,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1369720755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369720753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15e2bc510c8bc5f4880b88cb8826c598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerPrefabs:
-  - {fileID: 5864282942910415936, guid: 6a4a592b85d005f498df11c06fdf92a5, type: 3}
-  - {fileID: 5864282942910415936, guid: 60722e74b6957eb47af4a4284b175a72, type: 3}
-  - {fileID: 5864282942910415936, guid: 4e2f82884a635054eba19137cdf9b3e2, type: 3}
-  - {fileID: 5864282942910415936, guid: b2f946d50be64144997c38227f1086a1, type: 3}
-  - {fileID: 5864282942910415936, guid: 4c04664861bc3f045a7d8e33779fe2f6, type: 3}
-  towerListUI: {fileID: 803131307}
-  startPlacement: 0
-  currentTilePosition: {x: -3.72, y: -1.77, z: 0}
-  towerCost: 50
 --- !u!61 &1369720756
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3467,6 +3444,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1369720757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369720753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e2bc510c8bc5f4880b88cb8826c598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefabs:
+  - {fileID: 5864282942910415936, guid: 60722e74b6957eb47af4a4284b175a72, type: 3}
+  - {fileID: 5864282942910415936, guid: 4e2f82884a635054eba19137cdf9b3e2, type: 3}
+  - {fileID: 5864282942910415936, guid: b2f946d50be64144997c38227f1086a1, type: 3}
+  - {fileID: 5864282942910415936, guid: 4c04664861bc3f045a7d8e33779fe2f6, type: 3}
+  - {fileID: 5864282942910415936, guid: 6a4a592b85d005f498df11c06fdf92a5, type: 3}
+  towerListUI: {fileID: 803131307}
+  startPlacement: 0
+  currentTilePosition: {x: 0, y: 0, z: 0}
+  towerCost: 10
 --- !u!1 &1476389880
 GameObject:
   m_ObjectHideFlags: 0
@@ -3582,7 +3581,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 310.30154, y: -565}
+  m_AnchoredPosition: {x: 310.30157, y: -565}
   m_SizeDelta: {x: 540.6031, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1494542375
@@ -3706,7 +3705,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 310.30154, y: -465}
+  m_AnchoredPosition: {x: 310.30157, y: -465}
   m_SizeDelta: {x: 540.6031, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1545273535
@@ -4514,11 +4513,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   availableTowers:
-  - {fileID: 4082379348891951150, guid: 6a4a592b85d005f498df11c06fdf92a5, type: 3}
   - {fileID: 4082379348891951150, guid: 60722e74b6957eb47af4a4284b175a72, type: 3}
   - {fileID: 4082379348891951150, guid: 4e2f82884a635054eba19137cdf9b3e2, type: 3}
   - {fileID: 4082379348891951150, guid: b2f946d50be64144997c38227f1086a1, type: 3}
   - {fileID: 4082379348891951150, guid: 4c04664861bc3f045a7d8e33779fe2f6, type: 3}
+  - {fileID: 4082379348891951150, guid: 6a4a592b85d005f498df11c06fdf92a5, type: 3}
 --- !u!4 &1810293211
 Transform:
   m_ObjectHideFlags: 0
@@ -4970,7 +4969,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 310.30154, y: -72.5}
+  m_AnchoredPosition: {x: 310.30157, y: -72.5}
   m_SizeDelta: {x: 540.6031, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2034267190

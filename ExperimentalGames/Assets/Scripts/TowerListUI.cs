@@ -67,7 +67,7 @@ public class TowerListUI : MonoBehaviour
         towerButtons[index].GetComponent<Image>().color = Color.yellow;
 
         towerListPanel.SetActive(false);
-        placingTowers[index].StartTowerPlacement();
+        //placingTowers[index].StartTowerPlacement();
     }
 
     // Called when the close button is clicked
@@ -87,15 +87,15 @@ public class TowerListUI : MonoBehaviour
         {
             // Unhighlight the selected button
             int index = System.Array.IndexOf(GameManager.instance.availableTowers, selectedTower);
-            towerButtons[index].GetComponent<Image>().color = Color.white;
 
             selectedTower = null;
         }
     }
 
     // Gets the currently selected tower, if any
-    public Tower GetSelectedTower()
+    public Tower GetSelectedTower(Vector3 position)
     {
+        selectedTower.transform.position = position;
         return selectedTower;
     }
 
