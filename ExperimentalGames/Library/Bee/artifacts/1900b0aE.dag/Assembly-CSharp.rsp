@@ -379,8 +379,10 @@
 "Assets/Scripts/Projectile.cs"
 "Assets/Scripts/SceneChanger.cs"
 "Assets/Scripts/Tower.cs"
+"Assets/Scripts/TowerList.cs"
 "Assets/Scripts/TowerListUI.cs"
 "Assets/Scripts/TowerPlacement.cs"
+"Assets/Scripts/TowerPlacementSpots.cs"
 -langversion:9.0
 
 /deterministic

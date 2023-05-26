@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.TestRunner", "UnityEngine.TestRunner.csproj", "{02D05FE2-5A13-530C-B5A5-279BDFC26B36}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.UI", "UnityEngine.UI.csproj", "{7D93DBB3-6533-79E8-2888-1AE67674F695}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.TestRunner", "UnityEngine.TestRunner.csproj", "{02D05FE2-5A13-530C-B5A5-279BDFC26B36}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.VisualScripting.Flow", "Unity.VisualScripting.Flow.csproj", "{BA161863-8005-6F40-CCF0-D90E46CF0457}"
 EndProject
@@ -99,14 +99,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{02D05FE2-5A13-530C-B5A5-279BDFC26B36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02D05FE2-5A13-530C-B5A5-279BDFC26B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02D05FE2-5A13-530C-B5A5-279BDFC26B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02D05FE2-5A13-530C-B5A5-279BDFC26B36}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7D93DBB3-6533-79E8-2888-1AE67674F695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7D93DBB3-6533-79E8-2888-1AE67674F695}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D93DBB3-6533-79E8-2888-1AE67674F695}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D93DBB3-6533-79E8-2888-1AE67674F695}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02D05FE2-5A13-530C-B5A5-279BDFC26B36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02D05FE2-5A13-530C-B5A5-279BDFC26B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02D05FE2-5A13-530C-B5A5-279BDFC26B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02D05FE2-5A13-530C-B5A5-279BDFC26B36}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BA161863-8005-6F40-CCF0-D90E46CF0457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BA161863-8005-6F40-CCF0-D90E46CF0457}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA161863-8005-6F40-CCF0-D90E46CF0457}.Release|Any CPU.ActiveCfg = Release|Any CPU
