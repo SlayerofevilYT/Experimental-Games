@@ -12,6 +12,8 @@ public class TowerListUI : MonoBehaviour
     private Tower selectedTower;        // The currently selected tower
     public TowerPlacement[] placingTowers;
 
+    public TowerPlacement placementSpot;
+
     // Called when the script is first enabled
     private void Start()
     {
@@ -52,6 +54,10 @@ public class TowerListUI : MonoBehaviour
         }
     }*/
 
+    public void ChooseTowerSpot(TowerPlacement obj)
+    {
+        placementSpot = obj;
+    }
 
     // Called when a tower button is clicked
     private void OnTowerButtonClicked(int index)

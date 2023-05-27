@@ -14,9 +14,12 @@ public class TowerPlacement : MonoBehaviour
 
     public int towerCost = 50;
 
+    public TowerPlacement placementSpot;
+
     void OnMouseDown()
     {
         towerListUI.GetComponent<TowerListUI>().ShowTowerList(transform.position);
+        towerListUI.GetComponent<TowerListUI>().ChooseTowerSpot(this);
     }
 
     private void Update()

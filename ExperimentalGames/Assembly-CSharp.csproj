@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\TowerPlacementScripts\TowerListNonPath.cs" />
     <Compile Include="Assets\Scripts\AudioLoopController.cs" />
     <Compile Include="Assets\Scripts\ClickToPlace.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
@@ -67,11 +68,12 @@
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Tower.cs" />
+    <Compile Include="Assets\Scripts\TowerPlacementScripts\TowerPlacementNonPath.cs" />
     <Compile Include="Assets\Scripts\TowerPlacement.cs" />
     <Compile Include="Assets\Scripts\CloseButton.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
-    <Compile Include="Assets\Scripts\TowerList.cs" />
-    <Compile Include="Assets\Scripts\TowerPlacementSpots.cs" />
+    <Compile Include="Assets\Scripts\TowerPlacementScripts\TowerListPath.cs" />
+    <Compile Include="Assets\Scripts\TowerPlacementScripts\TowerPlacementPath.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

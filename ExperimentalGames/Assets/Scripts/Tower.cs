@@ -1,15 +1,25 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    public float range = 3f;        // The range of the tower's attacks
-    public float fireRate = 1f;     // The rate at which the tower fires
+    public float range;        // The range of the tower's attacks
+    public float fireRate;     // The rate at which the tower fires
     public GameObject projectile;  // The projectile that the tower fires
 
     private Transform target;       // The current target of the tower
     private float fireCountdown = 0f;   // The time until the tower can fire again
+
+    public AudioSource spawnAudio;
+
+    private void Awake()
+    {
+        if (spawnAudio != null)
+        {
+            spawnAudio.Play();
+        }
+    }
 
     // Called when the script is first enabled
     private void Start()
@@ -28,7 +38,7 @@ public class Tower : MonoBehaviour
         if (fireCountdown <= 0f)
         {
             Shoot();
-            fireCountdown = 1f / fireRate;
+            fireCountdown = 1f;
         }
 
         fireCountdown -= Time.deltaTime;
