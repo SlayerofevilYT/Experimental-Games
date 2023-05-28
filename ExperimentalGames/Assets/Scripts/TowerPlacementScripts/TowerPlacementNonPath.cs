@@ -11,12 +11,15 @@ public class TowerPlacementNonPath : MonoBehaviour
     public GameObject towerListPanel;
     public Tower[] placeableTowers;
 
-    public GameObject selectedSpot;
+    public bool isTowerHere = false;
 
     private void OnMouseDown()
     {
-        towerListUI.GetComponent<TowerListNonPath>().ShowTowerList(transform.position);
-        towerListUI.GetComponent<TowerListNonPath>().ChooseTowerSpot(this);
+        if (isTowerHere == false)
+        {
+            towerListUI.GetComponent<TowerListNonPath>().ShowTowerList(transform.position);
+            towerListUI.GetComponent<TowerListNonPath>().ChooseTowerSpot(this);
+        }
     }
 
     public void PickingTowers(int towerInt)
@@ -48,6 +51,7 @@ public class TowerPlacementNonPath : MonoBehaviour
             tower.transform.SetParent(transform);
             PlayerStats.Money -= towerCost;
             towerListPanel.SetActive(false);
+            isTowerHere = true;
         }
         else
         {
@@ -63,6 +67,7 @@ public class TowerPlacementNonPath : MonoBehaviour
             tower.transform.SetParent(transform);
             PlayerStats.Money -= towerCost;
             towerListPanel.SetActive(false);
+            isTowerHere = true;
         }
         else
         {
@@ -78,6 +83,7 @@ public class TowerPlacementNonPath : MonoBehaviour
             tower.transform.SetParent(transform);
             PlayerStats.Money -= towerCost;
             towerListPanel.SetActive(false);
+            isTowerHere = true;
         }
         else
         {
@@ -93,6 +99,7 @@ public class TowerPlacementNonPath : MonoBehaviour
             tower.transform.SetParent(transform);
             PlayerStats.Money -= towerCost;
             towerListPanel.SetActive(false);
+            isTowerHere = true;
         }
         else
         {
@@ -108,6 +115,7 @@ public class TowerPlacementNonPath : MonoBehaviour
             tower.transform.SetParent(transform);
             PlayerStats.Money -= towerCost;
             towerListPanel.SetActive(false);
+            isTowerHere = true;
         }
         else
         {

@@ -13,6 +13,9 @@ public class Tower : MonoBehaviour
 
     public AudioSource spawnAudio;
 
+    public float distanceToEnemy;
+    public float distanceToStoppedEnemy;
+
     private void Awake()
     {
         if (spawnAudio != null)
@@ -48,12 +51,23 @@ public class Tower : MonoBehaviour
     private void UpdateTarget()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject[] stoppedEnemies = GameObject.FindGameObjectsWithTag("StoppedEnemy");
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
 
+        foreach (GameObject enemy in stoppedEnemies)
+        {
+            distanceToStoppedEnemy = Vector3.Distance(transform.position, enemy.transform.position);
+            if (distanceToStoppedEnemy < shortestDistance)
+            {
+                shortestDistance = distanceToStoppedEnemy;
+                nearestEnemy = enemy;
+            }
+        }
+
         foreach (GameObject enemy in enemies)
         {
-            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
+            distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
             if (distanceToEnemy < shortestDistance)
             {
                 shortestDistance = distanceToEnemy;

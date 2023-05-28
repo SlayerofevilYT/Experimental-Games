@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     private Transform target;           // The target of the enemy
 
     // Takes damage and destroys the enemy when its health reaches zero
+
     public void TakeDamage(float damage)
     {
         health -= damage;

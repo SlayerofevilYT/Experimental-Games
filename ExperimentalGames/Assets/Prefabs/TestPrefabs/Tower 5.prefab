@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 4843923562445837663}
   - component: {fileID: 1975708538879302555}
   - component: {fileID: 4082379348891951150}
+  - component: {fileID: 1776439042941840435}
   m_Layer: 7
   m_Name: Tower 5
-  m_TagString: Untagged
+  m_TagString: PathTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,6 +103,22 @@ MonoBehaviour:
   fireRate: 1
   projectile: {fileID: 4190035776718747058, guid: 7b4f0b2c9aa7ebb42a0d1f124db74227, type: 3}
   spawnAudio: {fileID: 4940661611206200160}
+--- !u!58 &1776439042941840435
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5864282942910415936}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.8
 --- !u!1001 &3908740059270025456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -109,6 +126,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4843923562445837663}
     m_Modifications:
+    - target: {fileID: 8263652115092331408, guid: e5b786963917c414383cbce5696d5123, type: 3}
+      propertyPath: m_Volume
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 8263652115092331409, guid: e5b786963917c414383cbce5696d5123, type: 3}
       propertyPath: m_RootOrder
       value: 0

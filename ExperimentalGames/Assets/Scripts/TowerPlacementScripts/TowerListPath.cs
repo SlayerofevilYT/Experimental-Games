@@ -11,6 +11,8 @@ public class TowerListPath: MonoBehaviour
 
     public TowerPlacementPath placementSpot;
 
+    public bool canPlace;
+
     void Start()
     {
         towerListPanel.SetActive(false);

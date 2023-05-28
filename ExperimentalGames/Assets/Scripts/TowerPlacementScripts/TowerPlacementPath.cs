@@ -13,15 +13,21 @@ public class TowerPlacementPath : MonoBehaviour
 
     public GameObject selectedSpot;
 
+    public bool isTowerHere = false;
+
     private void OnMouseDown()
     {
-        towerListUI.GetComponent<TowerListPath>().ShowTowerList(transform.position);
-        towerListUI.GetComponent<TowerListPath>().ChooseTowerSpot(this);
+        if (isTowerHere == false && PlayerStats.pathTowerTest == true)
+        {
+            towerListUI.GetComponent<TowerListPath>().ShowTowerList(transform.position);
+            towerListUI.GetComponent<TowerListPath>().ChooseTowerSpot(this);
+        }
     }
 
     public void PickingTowers(int towerInt)
     {
-        switch(towerInt){
+        switch (towerInt)
+        {
             case 0:
                 placeFirstTower();
                 break;
@@ -48,6 +54,7 @@ public class TowerPlacementPath : MonoBehaviour
             tower.transform.SetParent(transform);
             PlayerStats.Money -= towerCost;
             towerListPanel.SetActive(false);
+            isTowerHere = true;
         }
         else
         {
@@ -63,6 +70,7 @@ public class TowerPlacementPath : MonoBehaviour
             tower.transform.SetParent(transform);
             PlayerStats.Money -= towerCost;
             towerListPanel.SetActive(false);
+            isTowerHere = true;
         }
         else
         {
@@ -78,6 +86,7 @@ public class TowerPlacementPath : MonoBehaviour
             tower.transform.SetParent(transform);
             PlayerStats.Money -= towerCost;
             towerListPanel.SetActive(false);
+            isTowerHere = true;
         }
         else
         {
@@ -93,6 +102,7 @@ public class TowerPlacementPath : MonoBehaviour
             tower.transform.SetParent(transform);
             PlayerStats.Money -= towerCost;
             towerListPanel.SetActive(false);
+            isTowerHere = true;
         }
         else
         {
@@ -108,6 +118,7 @@ public class TowerPlacementPath : MonoBehaviour
             tower.transform.SetParent(transform);
             PlayerStats.Money -= towerCost;
             towerListPanel.SetActive(false);
+            isTowerHere = true;
         }
         else
         {

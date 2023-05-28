@@ -24,6 +24,8 @@ public class EnemyWaveSpawner : MonoBehaviour
         waveInProgress = true;
         enemiesSpawned = 0;
 
+        yield return new WaitForSeconds(3f);
+
         while (enemiesSpawned < waveSize)
         {
             // spawn a new enemy
@@ -31,7 +33,7 @@ public class EnemyWaveSpawner : MonoBehaviour
             EnemyMovement enemyMovement = newEnemy.GetComponent<EnemyMovement>();
             if (enemyMovement != null)
             {
-                enemyMovement.SetPath(waypoints);
+                enemyMovement.SetPath(waypoints, 0);
             }
 
             enemiesSpawned++;
