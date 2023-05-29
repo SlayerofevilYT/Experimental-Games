@@ -7,6 +7,7 @@ public class Tower : MonoBehaviour
     public float range;        // The range of the tower's attacks
     public float fireRate;     // The rate at which the tower fires
     public GameObject projectile;  // The projectile that the tower fires
+    public GameObject firePos;
 
     private Transform target;       // The current target of the tower
     private float fireCountdown = 0f;   // The time until the tower can fire again
@@ -15,6 +16,8 @@ public class Tower : MonoBehaviour
 
     public float distanceToEnemy;
     public float distanceToStoppedEnemy;
+
+    public Animator towerAnim;
 
     private void Awake()
     {
@@ -35,13 +38,21 @@ public class Tower : MonoBehaviour
     {
         if (target == null)
         {
+            if (towerAnim != null)
+            {
+                towerAnim.SetBool("isAttacking", false);
+            }
             return;
         }
 
         if (fireCountdown <= 0f)
         {
+            if (towerAnim != null)
+            {
+                towerAnim.SetBool("isAttacking", true);
+            }
             Shoot();
-            fireCountdown = 1f;
+            fireCountdown = 1f / fireRate;
         }
 
         fireCountdown -= Time.deltaTime;
@@ -88,8 +99,15 @@ public class Tower : MonoBehaviour
     // Fires a projectile at the tower's target
     private void Shoot()
     {
-        GameObject newProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
-        newProjectile.GetComponent<Projectile>().SetTarget(target);
+        if (firePos != null)
+        {
+            GameObject newProjectile = Instantiate(projectile, firePos.transform.position, Quaternion.identity);
+            newProjectile.GetComponent<Projectile>().SetTarget(target);
+        } else
+        {
+            GameObject newProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
+            newProjectile.GetComponent<Projectile>().SetTarget(target);
+        }
     }
 
     // Draws a gizmo representing the tower's range in the Unity editor

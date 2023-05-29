@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\TowerPlacementScripts\TowerPlacementPath.cs" />
     <Compile Include="Assets\Scripts\TowerPlacementScripts\TowerListPath.cs" />
+    <Compile Include="Assets\Scripts\RandomAudioPlayer.cs" />
     <Compile Include="Assets\Scripts\TowerPlacementScripts\TowerListNonPath.cs" />
     <Compile Include="Assets\Scripts\AudioLoopController.cs" />
     <Compile Include="Assets\Scripts\ClickToPlace.cs" />
@@ -74,7 +75,6 @@
     <Compile Include="Assets\Scripts\TowerPlacement.cs" />
     <Compile Include="Assets\Scripts\CloseButton.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
-    <Compile Include="Assets\Scripts\RandomAudioPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

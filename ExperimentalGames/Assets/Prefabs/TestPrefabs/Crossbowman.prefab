@@ -58,12 +58,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5864282942910415936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.54, y: 3.1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9012718108194912829}
   - {fileID: 3783429389840969798}
+  - {fileID: 1809210806894792520}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -134,9 +135,42 @@ MonoBehaviour:
   range: 3
   fireRate: 1
   projectile: {fileID: 4190035776718747058, guid: 7b4f0b2c9aa7ebb42a0d1f124db74227, type: 3}
+  firePos: {fileID: 0}
   spawnAudio: {fileID: 1177794578779147252}
   distanceToEnemy: 0
   distanceToStoppedEnemy: 0
+  towerAnim: {fileID: 4696093178011703555}
+--- !u!1 &9163628989327107525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1809210806894792520}
+  m_Layer: 0
+  m_Name: firepoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1809210806894792520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9163628989327107525}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.327, y: 0.576, z: -0.0036824753}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4843923562445837663}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1790511505152229969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -478,6 +512,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e2386c489c9d4546b91bec36b5134d0, type: 3}
+--- !u!95 &4696093178011703555 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6481510439549967186, guid: 5e2386c489c9d4546b91bec36b5134d0, type: 3}
+  m_PrefabInstance: {fileID: 1790511505152229969}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7295856316437539791 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9050328767097334174, guid: 5e2386c489c9d4546b91bec36b5134d0, type: 3}

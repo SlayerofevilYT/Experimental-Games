@@ -133,8 +133,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 655db61b89aec104bbb560c4226f9e84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  speed: 0.13
   waypoints: []
+  isAlive: 1
 --- !u!114 &4340048713234218810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +151,8 @@ MonoBehaviour:
   health: 100
   scoreValue: 10
   deathEffect: {fileID: 0}
+  enemyAnim: {fileID: 4294169725044128659}
+  movement: {fileID: -8475395367317457411}
 --- !u!114 &6520041215470288051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,5 +396,10 @@ PrefabInstance:
 --- !u!4 &1784164284380458288 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5360892984983869028, guid: a337a7d85c437b048900c10dde4046b7, type: 3}
+  m_PrefabInstance: {fileID: 5955773231590243156}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4294169725044128659 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7579800821299839175, guid: a337a7d85c437b048900c10dde4046b7, type: 3}
   m_PrefabInstance: {fileID: 5955773231590243156}
   m_PrefabAsset: {fileID: 0}

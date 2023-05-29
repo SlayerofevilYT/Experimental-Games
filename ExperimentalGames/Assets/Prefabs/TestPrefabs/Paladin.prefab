@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4200355552213294177}
   m_Layer: 7
   m_Name: Paladin
-  m_TagString: PathTower
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,6 +106,7 @@ MonoBehaviour:
   spawnAudio: {fileID: 7661853387843353460}
   distanceToEnemy: 0
   distanceToStoppedEnemy: 0
+  towerAnim: {fileID: 0}
 --- !u!58 &4200355552213294177
 CircleCollider2D:
   m_ObjectHideFlags: 0

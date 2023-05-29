@@ -10,7 +10,23 @@ public class Enemy : MonoBehaviour
 
     private Transform target;           // The target of the enemy
 
+    public Animator enemyAnim;
+
+    public EnemyMovement movement;
     // Takes damage and destroys the enemy when its health reaches zero
+
+    private IEnumerator DeathAnim()
+    {
+        if (enemyAnim != null)
+        {
+            enemyAnim.SetBool("isDead", true);
+            yield return new WaitForSeconds(2f);
+            Destroy(gameObject);
+        } else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public void TakeDamage(float damage)
     {
@@ -18,14 +34,16 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
-            Die();
+            BeginDeath();
         }
     }
 
     // Destroys the enemy and plays the death particle effect
-    void Die()
+    void BeginDeath()
     {
         PlayerStats.Money += scoreValue;
-        Destroy(gameObject);
+        this.gameObject.tag = "Dead";
+        movement.isAlive = false;
+        StartCoroutine(DeathAnim());
     }
 }

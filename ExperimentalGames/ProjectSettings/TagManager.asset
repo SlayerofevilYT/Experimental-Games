@@ -8,6 +8,7 @@ TagManager:
   - NonPathTower
   - PathTower
   - StoppedEnemy
+  - Dead
   layers:
   - Default
   - TransparentFX

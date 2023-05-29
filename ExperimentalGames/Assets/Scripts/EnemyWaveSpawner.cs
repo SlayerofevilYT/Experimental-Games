@@ -7,7 +7,8 @@ public class EnemyWaveSpawner : MonoBehaviour
     public Transform[] waypoints;
 
     public GameObject enemyPrefab; // the enemy prefab to spawn
-    public float spawnInterval = 2f; // the interval between spawning enemies
+    public float minSpawnInterval = 8f; // the minimum interval between spawning enemies
+    public float maxSpawnInterval = 17f; // the maximum interval between spawning enemies
     public int waveSize = 10; // the number of enemies in each wave
 
     private int enemiesSpawned = 0; // the number of enemies that have been spawned in the current wave
@@ -28,6 +29,7 @@ public class EnemyWaveSpawner : MonoBehaviour
 
         while (enemiesSpawned < waveSize)
         {
+            float spawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval);
             // spawn a new enemy
             GameObject newEnemy = Instantiate(enemyPrefab, waypoints[0].position, Quaternion.identity);
             EnemyMovement enemyMovement = newEnemy.GetComponent<EnemyMovement>();

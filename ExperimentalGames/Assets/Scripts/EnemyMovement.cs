@@ -7,6 +7,8 @@ public class EnemyMovement : MonoBehaviour
     public Transform[] waypoints;
     private int waypointIndex;
 
+    public bool isAlive = true;
+
     public void SetPath(Transform[] newWaypoints, int wpIndex)
     {
         waypoints = newWaypoints;
@@ -20,46 +22,50 @@ public class EnemyMovement : MonoBehaviour
         {
             return;
         }
-
-        Vector3 targetPosition = waypoints[waypointIndex].position;
-        Vector3 moveDirection = (targetPosition - transform.position).normalized;
-        float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
-
-        if (distanceToTarget <= speed * Time.deltaTime)
+        
+        if (isAlive)
         {
-            // Reached the target waypoint
-            transform.position = targetPosition;
+            Vector3 targetPosition = waypoints[waypointIndex].position;
+            Vector3 moveDirection = (targetPosition - transform.position).normalized;
+            float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
 
-            waypointIndex++;
-
-            if (waypointIndex >= waypoints.Length)
+            if (distanceToTarget <= speed * Time.deltaTime)
             {
-                PlayerStats.Lives--;
-                Destroy(gameObject);
-                return;
+                // Reached the target waypoint
+                transform.position = targetPosition;
+
+                waypointIndex++;
+
+                if (waypointIndex >= waypoints.Length)
+                {
+                    PlayerStats.Lives--;
+                    Destroy(gameObject);
+                    return;
+                }
+
+                targetPosition = waypoints[waypointIndex].position;
+                moveDirection = (targetPosition - transform.position).normalized;
             }
 
-            targetPosition = waypoints[waypointIndex].position;
-            moveDirection = (targetPosition - transform.position).normalized;
-        }
-
-        // Check for obstacles in the way
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, moveDirection, 3.5f);
-        if (hit.collider != null)
-        {
-            if (hit.collider.tag == "StoppedEnemy")
+            // Check for obstacles in the way
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, moveDirection, 3.5f);
+            if (hit.collider != null)
             {
-                return;
-            } else if (hit.collider.tag == "PathTower")
-            {
-                gameObject.tag = "StoppedEnemy";
-                // An obstacle is detected, stop moving
-                return;
+                if (hit.collider.tag == "StoppedEnemy")
+                {
+                    return;
+                }
+                else if (hit.collider.tag == "PathTower")
+                {
+                    gameObject.tag = "StoppedEnemy";
+                    // An obstacle is detected, stop moving
+                    return;
+                }
             }
-        }
 
-        // Move towards the target waypoint
-        transform.position += moveDirection * speed * Time.deltaTime;
+            // Move towards the target waypoint
+            transform.position += moveDirection * speed * Time.deltaTime;
+        }
     }
 }
 

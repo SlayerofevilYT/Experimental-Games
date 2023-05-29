@@ -135,6 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.4
   waypoints: []
+  isAlive: 1
 --- !u!114 &4340048713234218810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +151,8 @@ MonoBehaviour:
   health: 50
   scoreValue: 10
   deathEffect: {fileID: 0}
+  enemyAnim: {fileID: 8404392475014833670}
+  movement: {fileID: -8475395367317457411}
 --- !u!114 &-2863182218656514631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,5 +384,10 @@ PrefabInstance:
 --- !u!4 &14196510146180489 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7883654800102401896, guid: ad00811903ebe2947838d96ed803b9b8, type: 3}
+  m_PrefabInstance: {fileID: 7879665353020150497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8404392475014833670 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1871341915010610407, guid: ad00811903ebe2947838d96ed803b9b8, type: 3}
   m_PrefabInstance: {fileID: 7879665353020150497}
   m_PrefabAsset: {fileID: 0}
