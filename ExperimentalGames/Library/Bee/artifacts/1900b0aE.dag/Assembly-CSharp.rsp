@@ -377,6 +377,7 @@
 "Assets/Scripts/PauseMenu.cs"
 "Assets/Scripts/PlayerStats.cs"
 "Assets/Scripts/Projectile.cs"
+"Assets/Scripts/RandomAudioPlayer.cs"
 "Assets/Scripts/SceneChanger.cs"
 "Assets/Scripts/Tower.cs"
 "Assets/Scripts/TowerListUI.cs"
