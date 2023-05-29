@@ -163,9 +163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb315f3682f0434c94714e49aacb7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 2
-  fireRate: 0.64
-  projectile: {fileID: 4190035776718747058, guid: 7b4f0b2c9aa7ebb42a0d1f124db74227, type: 3}
+  range: 6
+  fireRate: 0.2
+  projectile: {fileID: 4190035776718747058, guid: e370bd00a4de8bc4bb397ce15086f038, type: 3}
   firePos: {fileID: 1662250155261225752}
   spawnAudio: {fileID: 7113488683705325813}
   distanceToEnemy: 0

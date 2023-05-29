@@ -21,7 +21,7 @@ TagManager:
   - Bullet
   - Tile
   - Path
-  - 
+  - Trees Above
   - 
   - 
   - 
@@ -48,4 +48,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Trees Above
+    uniqueID: 556792795
     locked: 0
