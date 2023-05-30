@@ -8,22 +8,22 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainHub.unity
     guid: 562c32406dc24e84e9cce61a7017bc2d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Quests.unity
     guid: 2defe98afdcf8034eafba785a4a99f60
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tavern.unity
     guid: d974d6897315a0c44b1c61aa8c8429bc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TowerInfo.unity
     guid: 86f1b5ee8196d504d864e2cd746e90e1
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: bab1c3630aaf9924094580fe60aec641
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestLevel.unity
     guid: bbbae68c731cd7646ba88f55bc2e35d0
   m_configObjects: {}
