@@ -10,12 +10,13 @@ public class EnemyWaveSpawner : MonoBehaviour
     public float minSpawnInterval = 8f; // the minimum interval between spawning enemies
     public float maxSpawnInterval = 17f; // the maximum interval between spawning enemies
     public int waveSize = 10; // the number of enemies in each wave
-    public int waveCount = 0;
 
     public int waveIncrease = 0;
 
     private int enemiesSpawned = 0; // the number of enemies that have been spawned in the current wave
     private bool waveInProgress = false; // whether a wave is currently in progress
+
+    private int spawnedEnemyCount = 0;
 
     private void Start()
     {
@@ -27,7 +28,8 @@ public class EnemyWaveSpawner : MonoBehaviour
     {
         waveInProgress = true;
         enemiesSpawned = 0;
-        waveSize = waveSize + (waveCount * waveIncrease);
+        waveSize += waveIncrease;
+        spawnedEnemyCount = 0;
 
         yield return new WaitForSeconds(4f);
 
@@ -43,6 +45,7 @@ public class EnemyWaveSpawner : MonoBehaviour
             }
 
             enemiesSpawned++;
+            spawnedEnemyCount++;
 
             yield return new WaitForSeconds(spawnInterval);
         }
@@ -55,6 +58,7 @@ public class EnemyWaveSpawner : MonoBehaviour
         // check if the wave is finished
         if (!waveInProgress && GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
         {
+            Debug.Log("Spawned " + spawnedEnemyCount + " Enemies");
             // start the next wave
             StartCoroutine(SpawnWave());
         }
