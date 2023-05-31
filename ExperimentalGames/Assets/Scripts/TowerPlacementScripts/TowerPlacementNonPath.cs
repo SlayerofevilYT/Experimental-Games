@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class TowerPlacementNonPath : MonoBehaviour
 {
-
-    public int towerCost = 10;
-
     public GameObject towerListUI;
     public GameObject towerListPanel;
     public Tower[] placeableTowers;
 
     public bool isTowerHere = false;
 
+    public UISFXManager SFXManager;
+
     private void OnMouseDown()
     {
         if (isTowerHere == false)
         {
+            SFXManager.PlayClickSound();
             towerListUI.GetComponent<TowerListNonPath>().ShowTowerList(transform.position);
             towerListUI.GetComponent<TowerListNonPath>().ChooseTowerSpot(this);
         }
@@ -45,11 +45,11 @@ public class TowerPlacementNonPath : MonoBehaviour
 
     public void placeFirstTower()
     {
-        if (PlayerStats.Money >= towerCost)
+        if (PlayerStats.Money >= placeableTowers[0].towerCost)
         {
             Tower tower = Instantiate(placeableTowers[0], transform.position, Quaternion.identity);
             tower.transform.SetParent(transform);
-            PlayerStats.Money -= towerCost;
+            PlayerStats.Money -= placeableTowers[0].towerCost;
             towerListPanel.SetActive(false);
             isTowerHere = true;
         }
@@ -61,11 +61,11 @@ public class TowerPlacementNonPath : MonoBehaviour
 
     public void placeSecondTower()
     {
-        if (PlayerStats.Money >= towerCost)
+        if (PlayerStats.Money >= placeableTowers[1].towerCost)
         {
             Tower tower = Instantiate(placeableTowers[1], transform.position, Quaternion.identity);
             tower.transform.SetParent(transform);
-            PlayerStats.Money -= towerCost;
+            PlayerStats.Money -= placeableTowers[1].towerCost;
             towerListPanel.SetActive(false);
             isTowerHere = true;
         }
@@ -77,11 +77,11 @@ public class TowerPlacementNonPath : MonoBehaviour
 
     public void placeThirdTower()
     {
-        if (PlayerStats.Money >= towerCost)
+        if (PlayerStats.Money >= placeableTowers[2].towerCost)
         {
             Tower tower = Instantiate(placeableTowers[2], transform.position, Quaternion.identity);
             tower.transform.SetParent(transform);
-            PlayerStats.Money -= towerCost;
+            PlayerStats.Money -= placeableTowers[2].towerCost;
             towerListPanel.SetActive(false);
             isTowerHere = true;
         }
@@ -93,11 +93,11 @@ public class TowerPlacementNonPath : MonoBehaviour
 
     public void placeFourthTower()
     {
-        if (PlayerStats.Money >= towerCost)
+        if (PlayerStats.Money >= placeableTowers[3].towerCost)
         {
             Tower tower = Instantiate(placeableTowers[3], transform.position, Quaternion.identity);
             tower.transform.SetParent(transform);
-            PlayerStats.Money -= towerCost;
+            PlayerStats.Money -= placeableTowers[3].towerCost;
             towerListPanel.SetActive(false);
             isTowerHere = true;
         }
@@ -109,11 +109,11 @@ public class TowerPlacementNonPath : MonoBehaviour
 
     public void placeFifthTower()
     {
-        if (PlayerStats.Money >= towerCost)
+        if (PlayerStats.Money >= placeableTowers[4].towerCost)
         {
             Tower tower = Instantiate(placeableTowers[4], transform.position, Quaternion.identity);
             tower.transform.SetParent(transform);
-            PlayerStats.Money -= towerCost;
+            PlayerStats.Money -= placeableTowers[4].towerCost;
             towerListPanel.SetActive(false);
             isTowerHere = true;
         }

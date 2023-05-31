@@ -10,6 +10,9 @@ public class EnemyWaveSpawner : MonoBehaviour
     public float minSpawnInterval = 8f; // the minimum interval between spawning enemies
     public float maxSpawnInterval = 17f; // the maximum interval between spawning enemies
     public int waveSize = 10; // the number of enemies in each wave
+    public int waveCount = 0;
+
+    public int waveIncrease = 0;
 
     private int enemiesSpawned = 0; // the number of enemies that have been spawned in the current wave
     private bool waveInProgress = false; // whether a wave is currently in progress
@@ -24,8 +27,9 @@ public class EnemyWaveSpawner : MonoBehaviour
     {
         waveInProgress = true;
         enemiesSpawned = 0;
+        waveSize = waveSize + (waveCount * waveIncrease);
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(4f);
 
         while (enemiesSpawned < waveSize)
         {

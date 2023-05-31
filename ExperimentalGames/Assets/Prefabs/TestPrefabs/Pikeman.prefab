@@ -107,6 +107,7 @@ MonoBehaviour:
   distanceToEnemy: 0
   distanceToStoppedEnemy: 0
   towerAnim: {fileID: 0}
+  towerCost: 35
 --- !u!58 &1776439042941840435
 CircleCollider2D:
   m_ObjectHideFlags: 0

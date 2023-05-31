@@ -19,6 +19,8 @@ public class Tower : MonoBehaviour
 
     public Animator towerAnim;
 
+    public int towerCost;
+
     private void Awake()
     {
         if (spawnAudio != null)

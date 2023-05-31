@@ -6,9 +6,9 @@ using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
-    [SerializeField] public static int Lives = 20;      // The number of lives the player has
-    [SerializeField] public static int Money = 100;     // The amount of money the player has
-    public static bool pathTowerTest = false;
+    public static int Lives = 10;      // The number of lives the player has
+    public static int Money = 50;     // The amount of money the player has
+    public static bool pathTowerTest = true;
 
     public TMP_Text livesText;             // The UI text element that displays the player's lives
     public TMP_Text moneyText;             // The UI text element that displays the player's money
@@ -24,10 +24,10 @@ public class PlayerStats : MonoBehaviour
             EndGame();
         }
 
-        if (Input.GetKeyDown("t"))
-        {
-            pathTowerTest = !pathTowerTest;
-        }
+        //if (Input.GetKeyDown("t"))
+        //{
+        //    pathTowerTest = !pathTowerTest;
+        //}
     }
 
     void EndGame()
